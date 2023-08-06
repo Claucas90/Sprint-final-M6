@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SprintModulo6"
-        tools:targetApi="31" />
+        tools:targetApi="31">
+        <activity
+            android:name=".View.ViewModel.PhoneViewModel"
+            android:exported="false" />
+        <activity
+            android:name=".View.PhoneListAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".View.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Repository.PhoneRepository"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Repository.Mapper"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Remote.Clases.PhoneApiClass"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Remote.Clases.PhjoneApiClass"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Remote.Clases.DetailsPhoneApiClass"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Remote.RetrofitClient"
+            android:exported="false" />
+        <activity
+            android:name=".Model.Remote.PhoneApi"
+            android:exported="false" />
+        <activity
+            android:name=".Model.PhoneRoomDatabase"
+            android:exported="false" />
+        <activity
+            android:name=".view.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.SprintModulo6.NoActionBar" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
